@@ -10,8 +10,7 @@ header:
   icon: /assets/images/hackthebox.webp
 categories:
   - hackthebox
-  - infosec
-tags:  
+tags:
   - osticket
   - mysql
   - mattermost
@@ -31,7 +30,7 @@ Host is up (0.018s latency).
 Not shown: 65532 closed ports
 PORT     STATE SERVICE VERSION
 22/tcp   open  ssh     OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
-| ssh-hostkey: 
+| ssh-hostkey:
 |   2048 9c:40:fa:85:9b:01:ac:ac:0e:bc:0c:19:51:8a:ee:27 (RSA)
 |   256 5a:0c:c0:3b:9b:76:55:2e:6e:c4:f4:b9:5d:76:17:09 (ECDSA)
 |_  256 b7:9d:f7:48:9d:a2:f2:76:30:fd:42:d3:35:3a:80:8c (ED25519)
@@ -39,13 +38,13 @@ PORT     STATE SERVICE VERSION
 |_http-server-header: nginx/1.14.2
 |_http-title: Welcome
 8065/tcp open  unknown
-| fingerprint-strings: 
-|   GenericLines, Help, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+| fingerprint-strings:
+|   GenericLines, Help, RTSPRequest, SSLSessionReq, TerminalServerCookie:
 |     HTTP/1.1 400 Bad Request
 |     Content-Type: text/plain; charset=utf-8
 |     Connection: close
 |     Request
-|   GetRequest: 
+|   GetRequest:
 |     HTTP/1.0 200 OK
 |     Accept-Ranges: bytes
 |     Cache-Control: no-cache, max-age=31556926, public
@@ -58,7 +57,7 @@ PORT     STATE SERVICE VERSION
 |     X-Version-Id: 5.30.0.5.30.1.57fb31b889bf81d99d8af8176d4bbaaa.false
 |     Date: Sun, 09 May 2021 00:01:31 GMT
 |     <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><meta name="robots" content="noindex, nofollow"><meta name="referrer" content="no-referrer"><title>Mattermost</title><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="Mattermost"><meta name="format-detection" content="telephone=no"><link re
-|   HTTPOptions: 
+|   HTTPOptions:
 |     HTTP/1.0 405 Method Not Allowed
 |     Date: Sun, 09 May 2021 00:01:31 GMT
 |_    Content-Length: 0
@@ -199,7 +198,7 @@ C:\bin\hashcat>hashcat --help | findstr bcrypt
 
 My go-to rules is normally one of those two ruleset:
 
-- [https://github.com/NSAKEY/nsa-rules/blob/master/_NSAKEY.v2.dive.rule](https://github.com/NSAKEY/nsa-rules/blob/master/_NSAKEY.v2.dive.rule)
+- [https://github.com/NSAKEY/nsa-rules/blob/master/\_NSAKEY.v2.dive.rule](https://github.com/NSAKEY/nsa-rules/blob/master/_NSAKEY.v2.dive.rule)
 - [https://github.com/NotSoSecure/password_cracking_rules/blob/master/OneRuleToRuleThemAll.rule](https://github.com/NotSoSecure/password_cracking_rules/blob/master/OneRuleToRuleThemAll.rule)
 
 These will perform all sort of transformations on the wordlist and we can quickly crack the password: `PleaseSubscribe!21`

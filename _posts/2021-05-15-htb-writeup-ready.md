@@ -10,7 +10,6 @@ header:
   icon: /assets/images/hackthebox.webp
 categories:
   - hackthebox
-  - infosec
 tags:
   - linux
   - gitlab
@@ -33,14 +32,14 @@ Host is up (0.015s latency).
 Not shown: 65533 closed ports
 PORT     STATE SERVICE VERSION
 22/tcp   open  ssh     OpenSSH 8.2p1 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
-| ssh-hostkey: 
+| ssh-hostkey:
 |   3072 48:ad:d5:b8:3a:9f:bc:be:f7:e8:20:1e:f6:bf:de:ae (RSA)
 |   256 b7:89:6c:0b:20:ed:49:b2:c1:86:7c:29:92:74:1c:1f (ECDSA)
 |_  256 18:cd:9d:08:a6:21:a8:b8:b6:f7:9f:8d:40:51:54:fb (ED25519)
 5080/tcp open  http    nginx
 | http-robots.txt: 53 disallowed entries (15 shown)
-| / /autocomplete/users /search /api /admin /profile 
-| /dashboard /projects/new /groups/new /groups/*/edit /users /help 
+| / /autocomplete/users /search /api /admin /profile
+| /dashboard /projects/new /groups/new /groups/*/edit /users /help
 |_/s/ /snippets/new /snippets/*/edit
 | http-title: Sign in \xC2\xB7 GitLab
 |_Requested resource was http://10.129.149.31:5080/users/sign_in
@@ -57,7 +56,7 @@ We have access to create a new account.
 
 ![](/assets/images/htb-writeup-ready/gitlab2.png)
 
-Once logged in, we see in the projects list there's a single projet called *ready-channel*.
+Once logged in, we see in the projects list there's a single projet called _ready-channel_.
 
 ![](/assets/images/htb-writeup-ready/gitlab3.png)
 
@@ -79,7 +78,7 @@ Reverse shell connection:
 
 ## Privesc
 
-By running [linpeas.sh](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite) we find a backup file with some SMTP credentials for the gitlab application. 
+By running [linpeas.sh](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite) we find a backup file with some SMTP credentials for the gitlab application.
 
 ```
 Found /opt/backup/gitlab.rb
@@ -93,7 +92,7 @@ git@gitlab:/opt/backup$ su -l root
 su -l root
 Password: wW59U!ZKMbG9+*#h
 
-root@gitlab:~# 
+root@gitlab:~#
 ```
 
 There's a root_pass file in the root of the filesystem but that's not useful.
