@@ -17,7 +17,7 @@
         {% else %}
           {% assign author_link = author.home | relative_url %}
         {% endif %}
-        <a href="{{ author_link }}" target="_blank">
+        <a href="{{ author_link }}">
           <img src="{{ author_src }}" alt="{{ author.name }}" itemprop="image">
         </a>
       {% else %}
@@ -147,7 +147,7 @@
 
       {% if author.github %}
         <li>
-          <a href="https://github.com/{{ author.github }}" itemprop="sameAs" rel="nofollow noopener noreferrer">
+          <a href="https://github.com/{{ author.github }}" itemprop="sameAs" target="_blank" rel="nofollow noopener noreferrer">
             <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
           </a>
         </li>
