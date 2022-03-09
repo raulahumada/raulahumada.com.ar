@@ -17,7 +17,7 @@
         {% else %}
           {% assign author_link = author.home | relative_url %}
         {% endif %}
-        <a href="{{ author_link }}">
+        <a href="{{ author_link }}" target="_blank">
           <img src="{{ author_src }}" alt="{{ author.name }}" itemprop="image">
         </a>
       {% else %}
