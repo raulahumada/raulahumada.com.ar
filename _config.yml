@@ -101,7 +101,7 @@ analytics:
 # Site Author
 author:
   name: 'Raúl Ahumada'
-  avatar: '/assets/images/avatar.png'
+  avatar: 'https://mir-s3-cdn-cf.behance.net/project_modules/disp/5f57a052225385.590964f2b2df2.gif'
   bio: 'Programador, autodidacta👨‍💻'
   location: 'Argentina'
   email: 'raulahumada00@gmail.com'
